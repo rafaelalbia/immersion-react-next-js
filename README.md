@@ -1,1 +1,1 @@
-# immersion-react-next-js
+# immersion_react_next_js
