@@ -18,7 +18,7 @@ export const QuizContainer = styled.div`
   padding-top: 45px;
   margin: auto 10%;
   @media screen and (min-width: 500px) {
-    margin: auto;
+    margin: auto 10%;
     padding: 15px;
   }
 `;
@@ -36,7 +36,6 @@ export default function Home() {
             <p>Lorem inpsum dolor sit amet...</p>
           </Widget.Content>
         </Widget>
-          
         <Widget>
           <Widget.Content>
             <h1>Quizes of the community</h1>
