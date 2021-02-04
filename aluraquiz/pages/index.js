@@ -38,6 +38,8 @@ export default function Home() {
         <Head>
           <title>Java Quiz</title>
           <meta name="og_image" property="og:image" content="blob:https://vercel.com/3bd395b0-cf9c-4b3c-abd7-18d0f756f6aa" />
+          <meta property="og:image:width" content="600" />
+          <meta property="og:image:height" content="315" />
         </Head>
         <QuizLogo />
         <Widget>
