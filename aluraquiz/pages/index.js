@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -31,24 +32,42 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
 
       <QuizContainer>
         <Head>
-          <title>Java Quiz</title>
-          <meta name="og_image" property="og:image" content="blob:https://vercel.com/3bd395b0-cf9c-4b3c-abd7-18d0f756f6aa" />
-          <meta property="og:image:width" content="600" />
-          <meta property="og:image:height" content="315" />
+          <title>JavaQuiz</title>
         </Head>
         <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Java Quiz</h1>
           </Widget.Header>
-
           <Widget.Content>
-            <p>Lorem inpsum dolor sit amet...</p>
+            <form onSubmit={function (submitEvent) {
+              submitEvent.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do react');
+            }}
+            >
+              <input
+                onChange={function (submitEvent) {
+                  console.log(submitEvent.target.value);
+                  // State
+                  // name = submitEvent.target.value;
+                  setName(submitEvent.target.value);
+                }}
+                placeholder="Type your name"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Play
+                {` ${name}`}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
