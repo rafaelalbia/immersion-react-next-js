@@ -9,6 +9,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -45,7 +46,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Java Quiz</h1>
+            <h1>JavaQuiz</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function (submitEvent) {
@@ -56,7 +57,6 @@ export default function Home() {
             >
               <input
                 onChange={function (submitEvent) {
-                  console.log(submitEvent.target.value);
                   // State
                   // name = submitEvent.target.value;
                   setName(submitEvent.target.value);

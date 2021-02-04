@@ -6,30 +6,64 @@
       {
         "image": "https://placehold.it/400x400",
         "title": "Question 1",
-        "description": "Description of Question 1",
-        "answer": 1,
+        "description": "In what year did Java receive its first version?",
+        "answer": 2,
         "alternatives": [
-            "Alternative A",
-            "Alternative B",
-            "Alternative C",
-            "Alternative D"
+            "1989",
+            "1998",
+            "1996",
+            "1993"
         ]
       },
       {
         "image": "https://placehold.it/400x400",
         "title": "Question 2",
-        "description": "Description of Question 2",
+        "description": "What is the current version of Java (LTS)?",
+        "answer": 3,
+        "alternatives": [
+            "Java 8",
+            "Java 15",
+            "Java 10",
+            "Java 11"
+        ]
+      },
+      {
+        "image": "https://placehold.it/400x400",
+        "title": "Question 3",
+        "description": "Which is the most popular IDE for Java?",
+        "answer": 0,
+        "alternatives": [
+            "Eclipse",
+            "NetBeans",
+            "IntelliJ",
+            "Visual Studio Code"
+        ]
+      },
+      {
+        "image": "https://placehold.it/400x400",
+        "title": "Question 4",
+        "description": "Who created Java?",
         "answer": 2,
         "alternatives": [
-            "Alternative A",
-            "Alternative B",
-            "Alternative C",
-            "Alternative D"
+            "Guido van Rossum",
+            "Brendan Eich",
+            "James Gosling",
+            "Oracle"
+        ]
+      },
+      {
+        "image": "https://placehold.it/400x400",
+        "title": "Question 5",
+        "description": "The motto of Java is 'Write once, run anywhere'?",
+        "answer": 0,
+        "alternatives": [
+            "Yes",
+            "No"
         ]
       }
   ],
   "external": [
-    "htttp://aluraquiz-v2.omariosouto.vercel.app/"
+    "https://immersion-react-next-js.rafaelalbia.vercel.app/"
   ],
   "theme": {
       "colors": {
