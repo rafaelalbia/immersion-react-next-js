@@ -4,7 +4,7 @@
   "description": "Description of your quiz here",
   "questions": [
       {
-        "image": "https://placehold.it/400x400",
+        "image": "https://javapapers.com/wp-content/uploads/2012/08/launch.jpg",
         "title": "Question 1",
         "description": "In what year did Java receive its first version?",
         "answer": 2,
@@ -16,7 +16,7 @@
         ]
       },
       {
-        "image": "https://placehold.it/400x400",
+        "image": "https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_nevarpp_gettyimages-688718788_2400x1600-100795799-large.3x2.jpg",
         "title": "Question 2",
         "description": "What is the current version of Java (LTS)?",
         "answer": 3,
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "image": "https://placehold.it/400x400",
+        "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191129172715/What-Will-Be-The-Best-Java-IDEs-in-2020.png",
         "title": "Question 3",
         "description": "Which is the most popular IDE for Java?",
         "answer": 0,
@@ -40,7 +40,7 @@
         ]
       },
       {
-        "image": "https://placehold.it/400x400",
+        "image": "https://www.madboxpc.com/wp-content/uploads/2010/04/James_Gosling_java_cocreator.jpg",
         "title": "Question 4",
         "description": "Who created Java?",
         "answer": 2,
@@ -52,7 +52,7 @@
         ]
       },
       {
-        "image": "https://placehold.it/400x400",
+        "image": "https://ophtek.com/wp-content/uploads/2014/08/java_tech.jpg",
         "title": "Question 5",
         "description": "The motto of Java is 'Write once, run anywhere'?",
         "answer": 0,
