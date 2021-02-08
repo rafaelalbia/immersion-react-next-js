@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -21,42 +21,58 @@ function LoadingWidget() {
   );
 }
 
+function QuestionWidget({
+  question,
+  questionsTotal,
+  questionIndex,
+}) {
+  return (
+    <Widget>
+      <Widget.Header>
+        {/* <BackLinkArrow href="/"> /> */}
+        <h3>
+          {`Question ${questionIndex + 1} of ${questionsTotal}`}
+        </h3>
+      </Widget.Header>
+
+      <img
+        alt="Description"
+        style={{
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover',
+        }}
+        src={question.img}
+      />
+      <Widget.Content>
+        <h2>
+          {question.title}
+        </h2>
+        <p>
+          {question.description}
+        </p>
+        <Button>
+          Confirm
+        </Button>
+      </Widget.Content>
+    </Widget>
+  );
+}
+
 export default function QuizPage() {
+  const question = db.questions[0];
+  const questionsTotal = db.questions.length;
+  const questionIndex = 0;
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
-          <Widget.Header>
-            <h3>
-              Question
-              1
-              of
-              {` ${db.questions.length}`}
-            </h3>
-          </Widget.Header>
-
-          <img
-            alt="Description"
-            style={{
-              width: '100%',
-              height: '150px',
-              objectFit: 'cover',
-            }}
-            src="https://ribblevalleyconcrete.co.uk/home/400x400-light/"
-          />
-          <Widget.Content>
-            <h2>
-              Title
-            </h2>
-            <p>
-              Description
-            </p>
-            <Button>
-              Confirm
-            </Button>
-          </Widget.Content>
-        </Widget>
+        <QuestionWidget
+          question={question}
+          questionsTotal={questionsTotal}
+          questionIndex={questionIndex}
+        />
         <LoadingWidget />
       </QuizContainer>
     </QuizBackground>
