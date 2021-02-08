@@ -26,6 +26,7 @@ function QuestionWidget({
   questionsTotal,
   questionIndex,
 }) {
+  const questionId = `question__${questionIndex}`;
   return (
     <Widget>
       <Widget.Header>
@@ -42,7 +43,7 @@ function QuestionWidget({
           height: '150px',
           objectFit: 'cover',
         }}
-        src={question.img}
+        src={question.image}
       />
       <Widget.Content>
         <h2>
@@ -51,6 +52,23 @@ function QuestionWidget({
         <p>
           {question.description}
         </p>
+
+        {question.alternatives.map((alternative, alternativeIndex) => {
+          const alternativeId = `alternative__${alternativeIndex}`;
+          return (
+            <Widget.Topic
+              as="label"
+              htmlFor={alternativeId}
+            >
+              <input
+                id={alternativeId}
+                name={questionId}
+                type="radio"
+              />
+              {alternative}
+            </Widget.Topic>
+          );
+        })}
         <Button>
           Confirm
         </Button>
@@ -59,21 +77,40 @@ function QuestionWidget({
   );
 }
 
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+};
+
 export default function QuizPage() {
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const question = db.questions[0];
   const questionsTotal = db.questions.length;
   const questionIndex = 0;
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setScreenState(screenStates.QUIZ);
+    }, 1 * 1000);
+  }, []);
 
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <QuestionWidget
-          question={question}
-          questionsTotal={questionsTotal}
-          questionIndex={questionIndex}
-        />
-        <LoadingWidget />
+
+        {screenState === screenStates.QUIZ && (
+          <QuestionWidget
+            question={question}
+            questionsTotal={questionsTotal}
+            questionIndex={questionIndex}
+          />
+        )}
+
+        {screenState === screenStates.LOADING && <LoadingWidget />}
+
+        {screenState === screenStates.RESULT && <div>You got it right X questions</div>}
       </QuizContainer>
     </QuizBackground>
   );

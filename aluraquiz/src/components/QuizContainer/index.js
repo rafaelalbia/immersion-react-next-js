@@ -6,8 +6,8 @@ const QuizContainer = styled.div`
   padding-top: 45px;
   margin: auto 10%;
   top: 50%;
-  -ms-transform: translateY(20%);
-  transform: translateY(20%);
+  -ms-transform: translateY(10%);
+  transform: translateY(10%);
   @media screen and (min-width: 500px) {
     margin: auto 10%;
     padding: 15px;
