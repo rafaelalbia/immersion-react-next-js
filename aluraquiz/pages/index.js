@@ -36,13 +36,13 @@ export default function Home() {
             <h1>JavaQuiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (submitEvent) {
-              submitEvent.preventDefault();
+            <form onSubmit={function (changeEvent) {
+              changeEvent.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
             >
               <Input
-                onChange={(submitEvent) => setName(submitEvent.target.value)}
+                onChange={(changeEvent) => setName(changeEvent.target.value)}
                 placeholder="Type your name"
                 name="userName"
                 value={name}
