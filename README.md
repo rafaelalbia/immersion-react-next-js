@@ -1,7 +1,7 @@
 <h1>Immersion React NextJS</h1>
 
 <h2>⚛️ About the project</h2>
-<p>Project repository developed in the react nextjs immersion presented by Alura.</p>
+<p>Project repository developed in the React NextJS Immersion presented by Alura.</p>
 
 <h2>🛠️ Technologies</h2>
 <ul>
